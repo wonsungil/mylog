@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// namecard
+Route::resource('namecard', 'NameCard\NameCardController',
+    ['only' => ['index']],
+    ['names' => [
+        'index' => 'namecard.index'
+    ]]
+);
